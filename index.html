@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Technomart</title>
@@ -7,7 +7,153 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <header class="main-header">
+    <div class="header-first-block">
+      <a class="header-main-link">ТЕХНОМАРТ</a>
+      <form action="https://echo.htmlacademy.ru" method="POST" class="header-search-form">
+        <label for="search">Поиск:</label>
+        <input type="text" id="search" name="userSearch">
+        <button type="submit" class="visually-hidden">Найти</button>
+      </form>
+      <a href="#" class="header-user-markers">Закладки: <span id="userMakers">0</span></a>
+      <a href="#" class="header-cart">Корзина: <span id="numberOfGoodsCart">0</span></a>
+      <a href="#" class="header-order-button">Оформить заказ</a>
+    </div>
+    <div class="header-second-block">
+      <div class="header-main-head">
+        <h1>Интернет-магазин строительных материалов и инструментов для рем</h1>
+      </div>
+    </div>
+    <address class="header-about-us">
+      <p class="header-tel">+7 (812) 555-05-55</p>
+      <p class="header-adr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    </address>
+    <a href="#" class="header-login-button">Войти</a>
+    <a href="#" class="header-reg-button">Регистрация</a>
+    <nav class="header-main-nav">
+      <ul class="header-main-nav-list">
+        <li><a href="#" class="header-main-nav-link">Главная</a></li>
+        <li><a href="#" class="header-main-nav-link">Компания</a></li>
+        <li><a href="#" class="header-main-nav-link">Каталог</a></li>
+        <li><a href="#" class="header-main-nav-link">Новости</a></li>
+        <li><a href="#" class="header-main-nav-link">Спецпредложения</a></li>
+        <li><a href="#" class="header-main-nav-link">Доставка</a></li>
+        <li><a href="#" class="header-main-nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="best-deals">
+      <h2 class="visually-hidden">Наши лучшие предложения</h2>
+      <div class="best-deals-block best-deals-new">
+        <p class="best-deals-descr">Материалы</p>
+        <a href="#" class="best-deals-link">на любой вкус</a>
+      </div>
+      <div class="best-deals-block">
+        <p class="best-deals-descr">Инструмент</p>
+        <a href="" class="best-deals-link">НА ВСЕ СЛУЧАИ</a>
+      </div>
+      <div class="best-deals-block">
+        <p class="best-deals-descr">Техника</p>
+        <a href="" class="best-deals-link">для стройки</a>
+      </div>
+      <div class="best-deals-block">
+        <p class="best-deals-descr">Скидки 50%</p>
+        <a href="" class="best-deals-link">На 350 ТОВАРОВ</a>
+      </div>
+      <div class="best-deals-block">
+        <p class="best-deals-descr">Доставка</p>
+        <a href="" class="best-deals-link">бесплатно</a>
+      </div>
+      <div class="slider">
+        <div class="slide first-slide">
+          <img src="img/slide-1-min.jpg" alt="Мужик в каске и очках долбит стену перфоратором Bosch" width="620">
+          <p class="slide-head">Перфораторы</p>
+          <p class="slide descr">Настоящие мужские игрушки</p>
+          <a href="#" class="slide-link">ОТКРЫТЬ КАТАЛОГ</a>
+        </div>
+        <div class="slide second-slide">
+          <img src="img/slide-2-min.jpg" alt="Мужик в каске и очках сверлит стену дрелью Bosch" width="620">
+          <p class="slide-head">Дрели</p>
+          <p class="slide descr">Соседям на радость!</p>
+          <a href="#" class="slide-link">ОТКРЫТЬ КАТАЛОГ</a>
+        </div>
+        <button type="button"><span class="visually-hidden" class="slide-button previous-slide-button">Предыдущий слайд</span></button>
+          <button type="button"><span class="visually-hidden" class="slide-button next-slide-button">Следующий слайд</span></button>
+          <ul class="slide-paginator">
+            <li><button type="button" class="paginator-button paginator-button-current"><span class="visually-hidden">Первый слайд</span></button></li>
+            <li><button type="button" class="paginator-button"><span class="visually-hidden">Второй слайд</span></button></li>
+          </ul>
+      </div>
+    </section>
+    <section class="popular popular-item">
+      <div class="popular-head-block">
+        <h2 class="popular-head">Популярные товары</h2>
+        <a href="#" class="popular-head-link">все популярные товары</a>
+      </div>
+      <ul class="popular-item-list">
+        <li>
+          <img src="img/popitem-1.jpg" alt="Перфоратор BOSCH BFG 9000"class="popular-item-img">
+          <p class="popular-item-name">Перфоратор BOSCH BFG 9000</p>
+          <p class="popular-item-price">25500 Р.</p>
+          <p class="popular-item-old-price">32500 Р.</p>
+          <div class="popular-item-link">
+            <a href="#" class="popular-item-buy">КУПИТЬ</a>
+            <a href="#" class="popular-item-mark">В закладки</a>
+          </div>
+        </li>
+        <li>
+          <img src="img/popitem-2.jpg" alt="Перфоратор BOSCH BFG 3000"class="popular-item-img">
+          <p class="popular-item-name">Перфоратор BOSCH BFG 3000</p>
+          <p class="popular-item-price">15500 Р.</p>
+          <p class="popular-item-old-price">22500 Р.</p>
+          <div class="popular-item-link">
+            <a href="#" class="popular-item-buy">КУПИТЬ</a>
+            <a href="#" class="popular-item-mark">В закладки</a>
+          </div>
+        </li>
+        <li>
+          <img src="img/popitem-3.jpg" alt="Перфоратор BOSCH BFG 6000"class="popular-item-img">
+          <p class="popular-item-name">Перфоратор BOSCH BFG 6000</p>
+          <p class="popular-item-price">25500 Р.</p>
+          <p class="popular-item-old-price">30500 Р.</p>
+          <div class="popular-item-link">
+            <a href="#" class="popular-item-buy">КУПИТЬ</a>
+            <a href="#" class="popular-item-mark">В закладки</a>
+          </div>
+        </li>
+        <li>
+          <img src="img/popitem-4.jpg" alt="Перфоратор BOSCH BFG 2000"class="popular-item-img">
+          <p class="popular-item-name">Перфоратор BOSCH BFG 2000</p>
+          <p class="popular-item-price">12500 Р.</p>
+          <p class="popular-item-old-price"></p>
+          <div class="popular-item-link">
+            <a href="#" class="popular-item-buy">КУПИТЬ</a>
+            <a href="#" class="popular-item-mark">В закладки</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="popular-brand">
+      <div class="popular popular-head-block">
+        <h2 class="popular-head">Популярные производители:</h2>
+        <a href="#" class="popular-head-link">все производители<a>
+      </div>
+      <ul class="popular-brand-list">
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-1.jpg" alt="Bosch" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-2.jpg" alt="Makita" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-3.jpg" alt="DeWALT" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-4.jpg" alt="Интерскол" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-5.jpg" alt="HITACHI" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-6.jpg" alt="LG" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-7.jpg" alt="AEG power solution" class="popular-brand-img"></a></li>
+        <li><a href="#" class="popular-brand-link"><img src="img/popbrand-8.jpg" alt="Metabo work. dont play" class="popular-brand-img"></a></li>
+      </ul>
+    </section>
+    <section class="services">
+      
+    </section>
+  </main>
   <script src="js/script.js"></script>
 </body>
 </html>
