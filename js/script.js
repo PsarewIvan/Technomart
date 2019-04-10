@@ -11,6 +11,9 @@ var nextSlideBtn = document.querySelector('.slider-next-btn');
 var prevSlideBtn = document.querySelector('.slider-prev-btn');
 var currentSlide = 0;
 
+var servSlidesArray = document.querySelectorAll('.services-slide');
+var servSliderBtnsArray = document.querySelectorAll('.services-btn');
+
 // блок авторизации
 loginBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -25,10 +28,15 @@ logoutBtn.addEventListener('click', function(evt) {
 });
 
 // оживление сладйера
+var mainSliderParam = {
+  btnsClassActive: 'paginator-button-current',
+  slideOffClass: 'display-none'
+};
+
 [].forEach.call(buttonsSLidesArray, function(el, i) {
   el.addEventListener('click', function(evt) {
     evt.preventDefault();
-    slideChange(this.valueOf(), buttonsSLidesArray.length);
+    slideChange(this.valueOf(), buttonsSLidesArray, slidesArray, mainSliderParam);
   }.bind(i));
 });
 
@@ -42,15 +50,29 @@ logoutBtn.addEventListener('click', function(evt) {
   previousSlide();
  });
 
- function slideChange(indexSlideOn, slideLength) {
-  if (indexSlideOn >= slideLength) return;
-  for (var i = 0; i < slideLength; i++) {
+// слайдер сервиса
+var servicesSliderParam = {
+  btnsClassActive: 'services-btn-active',
+  slideOffClass: 'display-none'
+};
+
+[].forEach.call(servSliderBtnsArray, function(el, i) {
+  el.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    slideChange(this.valueOf(), servSliderBtnsArray, servSlidesArray, servicesSliderParam);
+  }.bind(i));
+});
+
+//  функции
+ function slideChange(indexSlideOn, btnsOfSlides, slides, param) {
+  if (indexSlideOn >= btnsOfSlides.length) return;
+  for (var i = 0; i < btnsOfSlides.length; i++) {
     if (i === indexSlideOn) {
-      buttonsSLidesArray[i].classList.add('paginator-button-current');
-      slidesArray[i].classList.remove('display-none');
+      btnsOfSlides[i].classList.add(param.btnsClassActive);
+      slides[i].classList.remove(param.slideOffClass);
     } else {
-      buttonsSLidesArray[i].classList.remove('paginator-button-current');
-      slidesArray[i].classList.add('display-none');
+      btnsOfSlides[i].classList.remove(param.btnsClassActive);
+      slides[i].classList.add(param.slideOffClass);
     }
   }
 }
