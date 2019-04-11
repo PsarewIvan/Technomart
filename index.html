@@ -5,13 +5,14 @@
   <title>Техномарт</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e019c76a-89e2-44c7-8609-85a3c8f10d5b&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
   <header class="main-header">
     <div class="header-first-block wrapper">
       <a class="main-link main-link-nothover">ТЕХНОМАРТ</a>
       <form action="https://echo.htmlacademy.ru" method="POST" class="header-search-form">
-        <input type="text" id="search" name="userSearch" class="header-search-input" placeholder="Поиск:">
+        <label><span class="visually-hidden">Поиск:</span><input type="text" id="search" name="userSearch" class="header-search-input" placeholder="Поиск:"></label>
         <button type="submit" class="header-search-btn"><span class="visually-hidden">Найти</span><svg width="17" height="17" viewBox="0 0 17 17" class="header-search-icon" fill="#ffffff"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg></button>
       </form>
       <a href="#" class="header-button header-button-markers">Закладки: <span id="userMakers">0</span></a>
@@ -31,10 +32,8 @@
         </div>
         <div class="header-user-login display-none">
           <div class="header-user-link-block">
-            <a href="#" class="header-log-button header-user-link link-animated">Равшан Джамшутович<svg width="20" height="18" viewBox="0 0 20 18" fill="#c5c5c5" class="header-user-icon"><path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
-            </a>
-            <a href="#" class="header-user-logout-link"><span class="visually-hidden">Выйти</span><svg width="21" height="17" viewBox="0 0 21 17" fill="#c5c5c5" class="header-user-logout-icon"><g><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
-            </a>
+            <a href="#" class="header-log-button header-user-link link-animated">Равшан Джамшутович<svg width="20" height="18" viewBox="0 0 20 18" fill="#c5c5c5" class="header-user-icon"><path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg></a>
+            <a href="#" class="header-user-logout-link"><span class="visually-hidden">Выйти</span><svg width="21" height="17" viewBox="0 0 21 17" fill="#c5c5c5" class="header-user-logout-icon"><g><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg></a>
           </div>
           <a href="#" class="header-user-links link-animated">Мои заказы</a>
           <a href="#" class="header-user-links link-animated">Личный кабинет</a>
@@ -83,7 +82,7 @@
             <p class="slide-head">Перфораторы</p>
             <p class="slide-descr">Настоящие мужские игрушки</p>
           </div>
-          <a href="#" class="main-btn slide-link">ОТКРЫТЬ КАТАЛОГ</a>
+          <a href="catalog.html" class="main-btn slide-link">ОТКРЫТЬ КАТАЛОГ</a>
         </div>
         <div class="slide display-none">
           <img src="img/slide-2-min.jpg" alt="Мужик в каске и очках сверлит стену дрелью Bosch" width="620">
@@ -93,8 +92,8 @@
           </div>
           <a href="#" class="main-btn slide-link">ОТКРЫТЬ КАТАЛОГ</a>
         </div>
-        <button type="button" class="slider-btn slider-prev-btn"><svg width="22" height="40" viewBox="0 0 22 40" fill="#FFF"><path d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/></svg><span class="visually-hidden" class="slide-button previous-slide-button">Предыдущий слайд</span></button>
-        <button type="button" class="slider-btn slider-next-btn"><svg width="22" height="40" viewBox="0 0 22 40" fill="#FFF"><path d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/></svg><span class="visually-hidden" class="slide-button next-slide-button">Следующий слайд</span></button>
+        <button type="button" class="slider-btn slider-prev-btn"><svg width="22" height="40" viewBox="0 0 22 40" fill="#FFF"><path d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/></svg><span class="visually-hidden">Предыдущий слайд</span></button>
+        <button type="button" class="slider-btn slider-next-btn"><svg width="22" height="40" viewBox="0 0 22 40" fill="#FFF"><path d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/></svg><span class="visually-hidden">Следующий слайд</span></button>
         <ul class="slide-paginator">
           <li><button type="button" class="paginator-button paginator-button-current"><span class="visually-hidden">Первый слайд</span></button></li>
           <li><button type="button" class="paginator-button"><span class="visually-hidden">Второй слайд</span></button></li>
@@ -216,7 +215,7 @@
     <div class="main-footer-nav-wrapper">
       <div class="wrapper main-footer-nav">
         <div class="main-footer-nav-link-block">
-          <a class="main-link">ТЕХНОМАРТ</a>
+          <a class="main-link main-link-nothover">ТЕХНОМАРТ</a>
           <address class="main-footer-nav-link-descr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>+7 (812) 555-05-55</address>
         </div>
         <nav class="main-footer-nav-block">
@@ -255,6 +254,32 @@
       </div>
     </div>
   </footer>
+  <section class="modal display-none">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form action="https://echo.htmlacademy.ru" method="post" class="modla-form" id="modalForm">
+      <label>
+        Ваше имя:
+        <input type="text" class="modal-input" id="userName" name="userName" placeholder="Представьтесь, пожалуйста">
+      </label>
+      <label>
+        Ваш e-mail:
+        <input type="email" class="modal-input" id="userEmail" name="userEmail" placeholder="Для отправки ответа">
+      </label>
+      <label>
+        Текст письма:
+        <textarea name="userMsg" cols="30" rows="2" class="modal-msg" id="userMessage" placeholder="В свободной форме"></textarea>
+      </label>
+    </form>
+    <div class="btn-wrapper">
+      <button type="submit" class="main-btn modal-submit" form="modalForm">ОТПРАВИТЬ</button>
+    </div>
+    <button type="button" class="modal-close"><span class="visually-hidden">Закрыть форму</span><svg x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" fill="#EE3643"><path d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0L10.5,7.727L3.078,0.305c-0.389-0.389-1.025-0.389-1.414,0L0.305,1.664c-0.389,0.389-0.389,1.025,0,1.414L7.727,10.5l-7.421,7.422c-0.389,0.389-0.389,1.025,0,1.414l1.359,1.359c0.389,0.389,1.025,0.389,1.414,0l7.422-7.422l7.422,7.422c0.389,0.389,1.025,0.389,1.414,0l1.359-1.359c0.389-0.389,0.389-1.025,0-1.414L13.273,10.5z"/></svg></button>
+  </section>
+  <section class="modal-map display-none" id="Ymap">
+    <h2 class="visually-hidden">Как к нам добраться</h2>
+    <button type="button" class="close-map-btn"><span class="visually-hidden">Закрыть карту</span><svg x="0px" y="0px" width="21px" height="21px" viewBox="0 0 21 21" enable-background="new 0 0 21 21" fill="#EE3643"><path d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0L10.5,7.727L3.078,0.305c-0.389-0.389-1.025-0.389-1.414,0L0.305,1.664c-0.389,0.389-0.389,1.025,0,1.414L7.727,10.5l-7.421,7.422c-0.389,0.389-0.389,1.025,0,1.414l1.359,1.359c0.389,0.389,1.025,0.389,1.414,0l7.422-7.422l7.422,7.422c0.389,0.389,1.025,0.389,1.414,0l1.359-1.359c0.389-0.389,0.389-1.025,0-1.414L13.273,10.5z"/></svg></button>
+  </section>
+  <div class="modal-overlay display-none"></div>
   <script src="js/script.js"></script>
 </body>
 </html>
