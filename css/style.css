@@ -350,6 +350,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header-adr {
+  box-sizing: border-box;
+  width: 260px;
   margin: 5px 0 0 9px;
 
   color: #32425c;
@@ -599,6 +601,7 @@ input[type="radio"].visually-hidden {
 }
 
 .best-deals-descr {
+  width: 190px;
   margin: 0 0 13px;
   padding: 0;
 
@@ -890,7 +893,8 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-item-name {
-  margin: 10px 0 38px;
+  width: 200px;
+  margin: 10px auto 76px;
 
   font-size: 18px;
   line-height: 20px;
@@ -898,12 +902,15 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-item-price {
-  position: relative;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
 
   box-sizing: border-box;
   width: 140px;
-  margin: 0 auto;
   padding: 10px 0;
+  transform: translateX(-50%);
+  margin-left: 50%;
 
   font-size: 17px;
   line-height: 18px;
