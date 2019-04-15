@@ -3,69 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>Техномарт. Каталог. Перфораторы</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/nouislider.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
     <div class="header-first-block wrapper">
-      <a href="index.html" class="main-link">ТЕХНОМАРТ</a>
-      <form action="https://echo.htmlacademy.ru" method="POST" class="header-search-form">
-        <label><span class="visually-hidden">Поиск:</span><input type="text" id="search" name="userSearch" class="header-search-input" placeholder="Поиск:"></label>
-        <button type="submit" class="header-search-btn"><span class="visually-hidden">Найти</span><svg width="17" height="17" viewbox="0 0 17 17" class="header-search-icon" fill="#ffffff"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg></button>
+      <a class="main-link main-link-nothover" href="index.html">ТЕХНОМАРТ</a>
+      <form class="header-search-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label for="search"><span class="visually-hidden">Поиск:</span></label>
+        <input class="header-search-input" type="text" id="search" name="userSearch" placeholder="Поиск:">
+        <button class="header-search-btn" type="submit"><span class="visually-hidden">Найти</span><svg class="header-search-icon" width="17" height="17" viewbox="0 0 17 17" fill="#ffffff"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg></button>
       </form>
-      <a href="#" class="header-button header-button-markers">Закладки: <span id="userMakers">0</span></a>
-      <a href="#" class="header-button header-button-cart">Корзина: <span id="numberOfGoodsCart">0</span></a>
-      <a href="#" class="header-button header-button-order">Оформить заказ</a>
+      <a class="header-button header-button-markers" href="#">Закладки: <span id="userMakers">0</span></a>
+      <a class="header-button header-button-cart" href="#">Корзина: <span id="numberOfGoodsCart">0</span></a>
+      <a class="header-button header-button-order" href="#">Оформить заказ</a>
     </div>
     <div class="header-second-block wrapper">
       <h1 class="header-main-head">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
       <address class="header-about-us">
-        <p class="header-tel">+7 (812) 555-05-55</p>
+        <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p class="header-adr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </address>
       <div class="header-user-block">
         <div class="header-user-logout">
-          <a href="#" class="header-log-button header-login-button link-animated"><svg  width="20" height="17" viewbox="0 0 20 17" fill="#c5c5c5" class="header-login-icon"><path d="M14.875 8.5L6 0v6H0v5h6v6z"/><path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>Войти</a>
-          <a href="#" class="header-log-button header-reg-button link-animated">Регистрация</a>
+          <a class="header-log-button header-login-button link-animated" href="#"><svg class="header-login-icon" width="20" height="17" viewbox="0 0 20 17" fill="rgba(37, 26, 26, 0.1)"><path d="M14.875 8.5L6 0v6H0v5h6v6z"/><path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>Войти</a>
+          <a class="header-log-button header-reg-button link-animated" href="#">Регистрация</a>
         </div>
         <div class="header-user-login display-none">
           <div class="header-user-link-block">
-            <a href="#" class="header-log-button header-user-link link-animated">Равшан Джамшутович<svg width="20" height="18" viewbox="0 0 20 18" fill="#c5c5c5" class="header-user-icon"><path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg></a>
-            <a href="#" class="header-user-logout-link"><span class="visually-hidden">Выйти</span><svg width="21" height="17" viewbox="0 0 21 17" fill="#c5c5c5" class="header-user-logout-icon"><g><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg></a>
+            <a class="header-log-button header-user-link link-animated" href="#">Равшан Джамшутович<svg class="header-user-icon" width="20" height="18" viewbox="0 0 20 18" fill="#c5c5c5"><path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg></a>
+            <a class="header-user-logout-link" href="#"><span class="visually-hidden">Выйти</span><svg class="header-user-logout-icon" width="21" height="17" viewbox="0 0 21 17" fill="#c5c5c5"><g><path d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg></a>
           </div>
-          <a href="#" class="header-user-links link-animated">Мои заказы</a>
-          <a href="#" class="header-user-links link-animated">Личный кабинет</a>
+          <a class="header-user-links link-animated" href="#">Мои заказы</a>
+          <a class="header-user-links link-animated" href="#">Личный кабинет</a>
         </div>
       </div>
     </div>
     <nav class="header-main-nav wrapper">
       <ul class="header-main-nav-list">
-        <li><a href="#" class="header-main-nav-link">Главная</a></li>
-        <li><a href="#" class="header-main-nav-link">Компания</a></li>
-        <li><a href="#" class="header-main-nav-link">Каталог</a></li>
-        <li><a href="#" class="header-main-nav-link">Новости</a></li>
-        <li><a href="#" class="header-main-nav-link">Спецпредложения</a></li>
-        <li><a href="#" class="header-main-nav-link">Доставка</a></li>
-        <li><a href="#" class="header-main-nav-link">Контакты</a></li>
+        <li><a  class="header-main-nav-link" href="#">Главная</a></li>
+        <li><a  class="header-main-nav-link" href="#">Компания</a></li>
+        <li><a  class="header-main-nav-link" href="#">Каталог</a></li>
+        <li><a  class="header-main-nav-link" href="#">Новости</a></li>
+        <li><a  class="header-main-nav-link" href="#">Спецпредложения</a></li>
+        <li><a  class="header-main-nav-link" href="#">Доставка</a></li>
+        <li><a  class="header-main-nav-link" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
   <main class="main-catalog-perforator">
-    <div class="catalog-breadcrumbs">
+    <div class="catalog-breadcrumbs wrapper">
       <ul class="catalog-breadcrumbs-list">
         <li><a href="#" class="breadcrumbs-link">Каталог</a></li>
-        <li><a href="#" class="breadcrumbs-link"></a>Инструмент</li>
+        <li><a href="#" class="breadcrumbs-link">Инструмент</a></li>
         <li><a class="breadcrumbs-link">Перфораторы</a></li>
       </ul>
     </div>
-    <section class="catalog-perforators">
+    <section class="catalog-perforators wrapper">
       <h2 class="catalog-head">ПЕРФОРАТОРЫ</h2>
       <section class="catalog-filter">
-        <h3 class="catalog-filter-head">ФИЛЬТР:</h3>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <div class="form-price-block">
-            <p class="form-head">ЦЕНА:</p>
+        <div class="filter-head-wrapper">
+          <h3 class="catalog-filter-head">ФИЛЬТР:</h3>
+        </div>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="form-price-block">
+            <legend class="form-head">ЦЕНА:</legend>
             <div class="price-filter-subblock">
               <div class="visually-hidden">
                 <label for="min-price-value">Минимальая цена</label>
@@ -73,7 +78,7 @@
                 <label for="max-price-value">Максимальная цена</label>
                 <input type="text" id="max-price-value"name="max-price-value" tabindex="-1">
               </div>
-              <div class="filter-price-slider">
+              <div class="price-slider-block">
                 <div class="price-slider" id="range-slider"></div>
               </div>
               <div class="price-output">
@@ -81,27 +86,47 @@
                 <p><span id="max-price">30000</span></p>
               </div>
             </div>
+          </fieldset>
+          <div class="manufacturers-wrappper">
+            <fieldset class="form-manufacturers">
+              <legend class="form-head">ПРОИЗВОДИТЕЛИ:</legend>
+              <ul role="0">
+                <li>
+                  <input class="visually-hidden input-manufacturers" type="checkbox" id="bosch" name="manufacturers" value="bosch" checked>
+                  <label class="form-label form-label-manufacturers" for="bosch">Bosch</label>
+                </li>
+                <li>
+                  <input class="visually-hidden input-manufacturers" type="checkbox" id="interscol" name="manufacturers" value="interscol">
+                  <label class="form-label form-label-manufacturers" for="interscol">ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <input class="visually-hidden input-manufacturers" type="checkbox" id="makita" name="manufacturers" value="makita" checked>
+                  <label class="form-label form-label-manufacturers" for="makita">Makita</label>
+                </li>
+                <li>
+                  <input class="visually-hidden input-manufacturers" type="checkbox" id="dewalt" name="manufacturers" value="dewalt">
+                  <label class="form-label form-label-manufacturers" for="dewalt">DeWalt</label>
+                </li>
+                <li>
+                  <input class="visually-hidden input-manufacturers" type="checkbox" id="hitachi" name="manufacturers" value="hitachi">
+                  <label class="form-label form-label-manufacturers" for="hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-          <div class="form-manufacturers">
-            <p class="form-head">ПРОИЗВОДИТЕЛИ:</p>
-            <input type="checkbox" class="visually-hidden" id="bosch" name="manufacturers" value="bosch" checked>
-            <label for="bosch" class="form-label form-label-manufacturers">Bosch</label>
-            <input type="checkbox" class="visually-hidden" id="interscol" name="manufacturers" value="interscol">
-            <label for="interscol" class="form-label form-label-manufacturers">ИНТЕРСКОЛ</label>
-            <input type="checkbox" class="visually-hidden" id="makita" name="manufacturers" value="makita" checked>
-            <label for="makita" class="form-label form-label-manufacturers">Makita</label>
-            <input type="checkbox" class="visually-hidden" id="dewalt" name="manufacturers" value="dewalt">
-            <label for="dewalt" class="form-label form-label-manufacturers">DeWalt</label>
-            <input type="checkbox" class="visually-hidden" id="hitachi" name="manufacturers" value="hitachi">
-            <label for="hitachi" class="form-label form-label-manufacturers">Hitachi</label>
-          </div>
-          <div class="form-power">
-            <p class="form-head">ПИТАНИЕ:</p>
-            <input type="checkbox" class="visually-hidden" id="battery" name="power" value="battery" checked>
-            <label for="battery" class="form-label form-label-power">Аккумуляторные</label>
-            <input type="checkbox" class="visually-hidden" id="network" name="power" value="network">
-            <label for="network" class="form-label form-label-power">Сетевые</label>
-          </div>
+          <fieldset class="form-power">
+            <legend class="form-head">ПИТАНИЕ:</legend>
+            <ul role="0">
+              <li>
+                <input type="checkbox" class="visually-hidden" id="battery" name="power" value="battery" checked>
+                <label for="battery" class="form-label form-label-power">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="checkbox" class="visually-hidden" id="network" name="power" value="network">
+                <label for="network" class="form-label form-label-power">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
           <div class="form-submit-block">
             <button type="submit" class="form-submit-btn">ПОКАЗАТЬ</button>
           </div>
@@ -282,5 +307,7 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/nouislider.js"></script>
+  <script src="js/nouislidercustom.js"></script>
 </body>
 </html>
