@@ -220,12 +220,12 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 
-.header-button:not(.full-cart .header-button-order):hover,
-.header-button:not(.full-cart .header-button-order):focus {
+.header-button:hover,
+.header-button:focus {
   background-color: #212a3a;
 }
 
-.header-button:not(.full-cart .header-button-order):active {
+.header-button:active {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #161d29;

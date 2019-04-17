@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Техномарт. Каталог. Перфораторы</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/nouislider.css">
   <link rel="stylesheet" href="css/style.css">
@@ -74,9 +74,9 @@
             <div class="price-filter-subblock">
               <div class="visually-hidden">
                 <label for="min-price-value">Минимальая цена</label>
-                <input type="text"id="min-price-value"name="min-price-value" tabindex="-1">
+                <input type="text" id="min-price-value" name="min-price-value" tabindex="-1">
                 <label for="max-price-value">Максимальная цена</label>
-                <input type="text" id="max-price-value"name="max-price-value" tabindex="-1">
+                <input type="text" id="max-price-value" name="max-price-value" tabindex="-1">
               </div>
               <div class="price-slider-block">
                 <div class="price-slider" id="range-slider"></div>
@@ -90,7 +90,7 @@
           <div class="manufacturers-wrappper">
             <fieldset class="form-manufacturers">
               <legend class="form-head">ПРОИЗВОДИТЕЛИ:</legend>
-              <ul role="0">
+              <ul role="listbox">
                 <li>
                   <input class="visually-hidden input-manufacturers" type="checkbox" id="bosch" name="manufacturers" value="bosch" checked>
                   <label class="form-label form-label-manufacturers" for="bosch">Bosch</label>
@@ -117,7 +117,7 @@
           <div class="power-wrapper">
             <fieldset class="form-power">
               <legend class="form-head">ПИТАНИЕ:</legend>
-              <ul role="0">
+              <ul role="radiogroup">
                 <li>
                   <input class="visually-hidden input-power" id="battery" type="radio" name="power" value="battery" checked>
                   <label class="form-label form-label-power" for="battery">Аккумуляторные</label>
@@ -157,6 +157,7 @@
           </div>
         </section>
         <section class="catalog-items">
+          <h3 class="visually-hidden">Перечень товаров</h3>
           <ul class="items-list">
             <li tabindex="0">
               <img class="item-img" src="img/popitem-2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
