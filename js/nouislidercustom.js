@@ -1,14 +1,14 @@
 var slider = document.getElementById('range-slider');
 
-  noUiSlider.create(slider, {
-    start: [0, 30000],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 30000
-    },
-    step: 100
-  });
+noUiSlider.create(slider, {
+  start: [0, 30000],
+  connect: true,
+  range: {
+      'min': 0,
+      'max': 30000
+  },
+  step: 100
+});
 
 var snapValues = [
   document.getElementById('min-price'),

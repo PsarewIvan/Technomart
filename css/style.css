@@ -809,6 +809,14 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.slide:nth-child(1) {
+  background-color: #917f6e;
+}
+
+.slide:nth-child(2) {
+  background-color: #684c3e;
+}
+
 .slide-text-block {
   position: absolute;
   top: 23px;
@@ -1532,6 +1540,8 @@ input[type="radio"].visually-hidden {
   display: block;
 
   line-height: 0;
+
+  background-color: #efe7dd;
 }
 
 .map-link:hover::after,
