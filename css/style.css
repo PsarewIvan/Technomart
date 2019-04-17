@@ -220,12 +220,12 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 
-.header-button:hover,
-.header-button:focus {
+.header-button:not(.full-cart .header-button-order):hover,
+.header-button:not(.full-cart .header-button-order):focus {
   background-color: #212a3a;
 }
 
-.header-button:active {
+.header-button:not(.full-cart .header-button-order):active {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #161d29;
@@ -425,7 +425,7 @@ input[type="radio"].visually-hidden {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 13px 45px;
+  padding: 13px 47px;
 }
 
 .header-user-link-block {
@@ -436,8 +436,8 @@ input[type="radio"].visually-hidden {
 
 .header-user-icon {
   position: absolute;
-  top: 13px;
-  left: 15px;
+  top: 14px;
+  left: 14px;
 }
 
 .header-user-logout-link {
@@ -468,7 +468,7 @@ input[type="radio"].visually-hidden {
 .header-user-links {
   position: relative;
 
-  margin: 9px 17px 0;
+  margin: 3px 17px 0;
 
   font-size: 16px;
   color: #32425c;
@@ -867,7 +867,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 0 32px;
   padding: 0;
 
   list-style: none;
@@ -1751,7 +1751,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 13px;
   padding: 0;
 
   font-size: 13px;
@@ -1786,13 +1786,13 @@ input[type="radio"].visually-hidden {
 .catalog-breadcrumbs-list li {
   position: relative;
 
-  margin-left: 30px;
+  margin-left: 41px;
 }
 
 .catalog-breadcrumbs-list li::after {
   position: absolute;
   top: 2px;
-  left: -17px;
+  left: -25px;
 
   display: block;
   width: 8px;
@@ -1806,7 +1806,7 @@ input[type="radio"].visually-hidden {
 .catalog-breadcrumbs-list::after {
   position: absolute;
   top: 2px;
-  left: -30px;
+  left: -15px;
 
   display: block;
   width: 15px;
@@ -1835,6 +1835,7 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
+  font-family: 'Cuprum', 'Helvetica', sans-serif;
   color: #32425c;
 
   background-color: #f2f6f8;
@@ -1845,7 +1846,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-head-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   padding: 10px 20px;
 
   background-color: #f7f3ec;
@@ -1862,7 +1863,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-head {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   font-size: 17px;
   line-height: 1em;
@@ -1921,14 +1922,14 @@ fieldset {
 
 .manufacturers-wrappper,
 .power-wrapper {
-  margin-bottom: 25px;
-  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 22px;
 
   border-top: 1px solid #e5e5e5;
 }
 
 .catalog-filter li {
-  margin: 0 0 15px 35px;
+  margin: 0 0 16px 35px;
 }
 
 .catalog-filter li:last-child {
@@ -2002,7 +2003,7 @@ fieldset {
 }
 
 .power-wrapper {
-  margin-bottom: 75px;
+  margin-bottom: 78px;
 }
 
 .catalog-btn {
@@ -2120,7 +2121,7 @@ fieldset {
 }
 
 .sort-method-button:first-child {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .sort-method-button:not(.sort-active-button):hover svg,
@@ -2190,11 +2191,12 @@ fieldset {
 }
 
 .about-perforators {
-  padding: 65px 0 70px;
+  padding-top: 65px;
+  padding-bottom: 68px;
 }
 
 .about-perforators-head {
-  margin: 0 0 35px;
+  margin: 0 0 26px;
 
   font-size: 30px;
   line-height: 30px;
@@ -2207,6 +2209,19 @@ fieldset {
 
   font-size: 13px;
   font-family: 'PT Sans', 'Helvetica', sans-serif;
+}
+
+.full-cart {
+  background-color: #ee3643;
+}
+
+.full-cart:hover,
+.full-cart:focus {
+  background-color: #ca2c37;
+}
+
+.full-cart:active {
+  background-color: #ba2732;
 }
 
 .display-none {
