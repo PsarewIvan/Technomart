@@ -6,11 +6,11 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=e019c76a-89e2-44c7-8609-85a3c8f10d5b&lang=ru_RU"></script> -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e019c76a-89e2-44c7-8609-85a3c8f10d5b&lang=ru_RU"></script>
 </head>
 <body id="index">
   <header class="main-header">
-    <div class="header-first-block wrapper">
+    <div class="main-header__first-block firs-header-block wrapper">
       <a class="main-link main-link-nothover">ТЕХНОМАРТ</a>
       <form class="header-search-form" action="https://echo.htmlacademy.ru" method="POST">
         <label for="search"><span class="visually-hidden">Поиск:</span></label>
@@ -21,7 +21,7 @@
       <a class="header-button header-button-cart" href="#">Корзина: <span id="numberOfGoodsCart">0</span></a>
       <a class="header-button header-button-order" href="#">Оформить заказ</a>
     </div>
-    <div class="header-second-block wrapper">
+    <div class="main-header__second-block wrapper">
       <h1 class="header-main-head">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
       <address class="header-about-us">
         <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -42,15 +42,29 @@
         </div>
       </div>
     </div>
-    <nav class="header-main-nav wrapper">
+    <nav class="main-header__navigation wrapper">
       <ul class="header-main-nav-list">
-        <li><a class="header-main-nav-link" href="#">Главная</a></li>
-        <li><a class="header-main-nav-link" href="#">Компания</a></li>
-        <li><a class="header-main-nav-link" href="#">Каталог</a></li>
-        <li><a class="header-main-nav-link" href="#">Новости</a></li>
-        <li><a class="header-main-nav-link" href="#">Спецпредложения</a></li>
-        <li><a class="header-main-nav-link" href="#">Доставка</a></li>
-        <li><a class="header-main-nav-link" href="#">Контакты</a></li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Главная</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Компания</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Каталог</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Новости</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Спецпредложения</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Доставка</a>
+        </li>
+        <li class="main-nav__li">
+          <a class="header-main-nav-link" href="#">Контакты</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -402,6 +416,6 @@
     <button class="close-map-btn" type="button"><span class="visually-hidden">Закрыть карту</span><svg x="0px" y="0px" width="21px" height="21px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" fill="#EE3643"><path d="M13.273,10.5l7.422-7.422c0.389-0.389,0.389-1.025,0-1.414l-1.359-1.359c-0.389-0.389-1.025-0.389-1.414,0L10.5,7.727L3.078,0.305c-0.389-0.389-1.025-0.389-1.414,0L0.305,1.664c-0.389,0.389-0.389,1.025,0,1.414L7.727,10.5l-7.421,7.422c-0.389,0.389-0.389,1.025,0,1.414l1.359,1.359c0.389,0.389,1.025,0.389,1.414,0l7.422-7.422l7.422,7.422c0.389,0.389,1.025,0.389,1.414,0l1.359-1.359c0.389-0.389,0.389-1.025,0-1.414L13.273,10.5z"/></svg></button>
   </section>
   <div class="modal-overlay display-none"></div>
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 </html>

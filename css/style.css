@@ -141,7 +141,7 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(to bottom, #293449, #293449 42px, #f3f7f9 42px);
 }
 
-.header-first-block {
+.firs-header-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,7 +368,7 @@ input[type="radio"].visually-hidden {
   background-color: #518534;
 }
 
-.header-second-block {
+.main-header__second-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,11 +631,11 @@ input[type="radio"].visually-hidden {
   border-bottom: 5px solid #293449;
 }
 
-.header-main-nav-list li:first-child .header-main-nav-link {
+.main-nav__li:first-child .header-main-nav-link {
   padding-left: 20px;
 }
 
-.header-main-nav-list li:last-child .header-main-nav-link {
+.main-nav__li:last-child .header-main-nav-link {
   padding-right: 20px;
 }
 
