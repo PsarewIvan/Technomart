@@ -1,25 +1,25 @@
 'use strict'
 
-var loginBlock = document.querySelector('.header-user-logout');
-var userBlock = document.querySelector('.header-user-login');
-var loginBtn = document.querySelector('.header-login-button');
-var logoutBtn = document.querySelector('.header-user-logout-link');
+var loginBlock = document.querySelector('.log-block__login');
+var userBlock = document.querySelector('.log-block__logout');
+var loginBtn = document.querySelector('.log-block__login-btn');
+var logoutBtn = document.querySelector('.log-block__logout-link');
 
 if (document.getElementById('index')) {
   // slider
-  var buttonsSLidesArray = document.querySelectorAll('.paginator-button');
-  var slidesArray = document.querySelectorAll('.slide');
-  var nextSlideBtn = document.querySelector('.slider-next-btn');
-  var prevSlideBtn = document.querySelector('.slider-prev-btn');
+  var buttonsSLidesArray = document.querySelectorAll('.slider__paginator-button');
+  var slidesArray = document.querySelectorAll('.slider__slide');
+  var nextSlideBtn = document.getElementById('nextSlide');
+  var prevSlideBtn = document.getElementById('prevSlide');
   var currentSlide = 0;
   
-  var servSlidesArray = document.querySelectorAll('.services-slide');
-  var servSliderBtnsArray = document.querySelectorAll('.services-btn');
+  var servSlidesArray = document.querySelectorAll('.vertical-slides__slide');
+  var servSliderBtnsArray = document.querySelectorAll('.vertical-slides__btn');
   
   // popup
-  var popupBtn = document.querySelector('.info-contact-link');
+  var popupBtn = document.querySelector('.contacts__btn');
   var popup = document.querySelector('.modal');
-  var modalCloseBtn = popup.querySelector('.modal-close');
+  var modalCloseBtn = document.getElementById('formClose');
   var inputName = popup.querySelector('#userName');
   var inputEmail = popup.querySelector('#userEmail');
   var inputMessage =popup.querySelector('#userMessage');
@@ -31,12 +31,12 @@ if (document.getElementById('index')) {
   
   // map
   var popupMap = document.querySelector('#Ymap');
-  var popupMapBtn = document.querySelector('.map-link');
-  var popupMapClose = popupMap.querySelector('.close-map-btn');
+  var popupMapBtn = document.querySelector('.map__link');
+  var popupMapClose = document.getElementById('mapClose');
 
   // оживление сладйера
   var mainSliderParam = {
-    btnsClassActive: 'paginator-button-current',
+    btnsClassActive: 'slider__paginator-button--current',
     slideOffClass: 'display-none'
   };
   
@@ -59,7 +59,7 @@ if (document.getElementById('index')) {
   
   // слайдер сервиса
   var servicesSliderParam = {
-    btnsClassActive: 'services-btn-active',
+    btnsClassActive: 'vertical-slides__btn--active',
     slideOffClass: 'display-none'
   };
   
@@ -81,7 +81,7 @@ if (document.getElementById('index')) {
   popupBtn.addEventListener('click', function(evt) {
     evt.preventDefault();
     popup.classList.remove('display-none');
-    popup.classList.add('modal-show');
+    popup.classList.add('modal--show');
     modalOverlay.classList.remove('display-none');
     if (storageName && storageEmail) {
       inputName.value = storageName;
@@ -101,34 +101,34 @@ if (document.getElementById('index')) {
   modalCloseBtn.addEventListener('click', function(evt) {
     evt.preventDefault();
     popup.classList.add('display-none');
-    popup.classList.remove('modal-show');
-    popup.classList.remove('modal-error');
+    popup.classList.remove('modal--show');
+    popup.classList.remove('modal--error');
     modalOverlay.classList.add('display-none');
   });
   
   modalForm.addEventListener('submit', function(evt) {
-    inputName.classList.remove('modal-input-invalid');
-    inputEmail.classList.remove('modal-input-invalid');
-    inputMessage.classList.remove('modal-input-invalid');
+    inputName.classList.remove('modal__input--invalid');
+    inputEmail.classList.remove('modal__input--invalid');
+    inputMessage.classList.remove('modal__input--invalid');
     if (!inputName.value || !inputEmail.value || !inputMessage.value) {
       evt.preventDefault();
-      popup.classList.remove('modal-error');
+      popup.classList.remove('modal--error');
       void popup.offsetWidth;
-      popup.classList.add('modal-error');
+      popup.classList.add('modal--error');
       if (!inputName.value) {
-        inputName.classList.remove('modal-input-invalid');
+        inputName.classList.remove('modal__input--invalid');
         void inputName.offsetWidth;
-        inputName.classList.add('modal-input-invalid');
+        inputName.classList.add('modal__input--invalid');
       }
       if (!inputEmail.value) {
-        inputEmail.classList.remove('modal-input-invalid');
+        inputEmail.classList.remove('modal__input--invalid');
         void inputEmail.offsetWidth;
-        inputEmail.classList.add('modal-input-invalid');
+        inputEmail.classList.add('modal__input--invalid');
       }
       if (!inputMessage.value) {
-        inputMessage.classList.remove('modal-input-invalid');
+        inputMessage.classList.remove('modal__input--invalid');
         void inputMessage.offsetWidth;
-        inputMessage.classList.add('modal-input-invalid');
+        inputMessage.classList.add('modal__input--invalid');
       }
     } else {
       if (isStorage) {
@@ -143,7 +143,7 @@ if (document.getElementById('index')) {
       evt.preventDefault();
       if (!popup.classList.contains('display-none')) {
         popup.classList.add('display-none');
-        popup.classList.remove('modal-error');
+        popup.classList.remove('modal--error');
         modalOverlay.classList.add('display-none');
       }
       if (!popupMap.classList.contains('display-none')) {
@@ -157,7 +157,7 @@ if (document.getElementById('index')) {
     if (!popup.classList.contains('display-none')) {
       evt.preventDefault();
       popup.classList.add('display-none');
-      popup.classList.remove('modal-error');
+      popup.classList.remove('modal--error');
       modalOverlay.classList.add('display-none');
     }
     if (!popupMap.classList.contains('display-none')) {
@@ -186,14 +186,14 @@ if (document.getElementById('index')) {
   popupMapBtn.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.remove('display-none');
-    popupMap.classList.add('modal-show');
+    popupMap.classList.add('modal--show');
     modalOverlay.classList.remove('display-none');
   });
   
   popupMapClose.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.add('display-none');
-    popupMap.classList.remove('modal-show');
+    popupMap.classList.remove('modal--show');
     modalOverlay.classList.add('display-none');
   });
 }
@@ -246,9 +246,9 @@ function findCurrentSLide() {
  
 function goToSlide(n) {
   currentSlide = findCurrentSLide();
-  slidesArray[currentSlide].className = 'slide display-none';
-  buttonsSLidesArray[currentSlide].classList.remove('paginator-button-current');
+  slidesArray[currentSlide].className = 'slider__slide display-none';
+  buttonsSLidesArray[currentSlide].classList.remove('slider__paginator-button--current');
   currentSlide = (n + slidesArray.length) % slidesArray.length;
-  slidesArray[currentSlide].className = 'slide';
-  buttonsSLidesArray[currentSlide].classList.add('paginator-button-current');
+  slidesArray[currentSlide].className = 'slider__slide';
+  buttonsSLidesArray[currentSlide].classList.add('slider__paginator-button--current');
 }
