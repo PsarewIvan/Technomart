@@ -10,7 +10,7 @@
 </head>
 <body id="index">
   <header class="main-header">
-    <div class="main-header__first-block header-block1 wrapper">
+    <div class="header-block1 wrapper">
       <a class="header-block1__main-link header-block1__main-link--nothover">ТЕХНОМАРТ</a>
       <form class="header-block1__search" action="https://echo.htmlacademy.ru" method="POST">
         <label for="search"><span class="visually-hidden">Поиск:</span></label>
@@ -21,7 +21,7 @@
       <a class="header-block1__button header-block1__button--cart" href="#">Корзина: <span id="numberOfGoodsCart">0</span></a>
       <a class="header-block1__button header-block1__button--order" href="#">Оформить заказ</a>
     </div>
-    <div class="main-header__second-block header-block2 wrapper">
+    <div class="header-block2 wrapper">
       <h1 class="header-block2__head"><span class="visually-hidden">Техномарт - </span>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
       <address class="header-block2__contacts">
         <a class="header-block2__tel header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -42,8 +42,8 @@
         </div>
       </div>
     </div>
-    <nav class="main-header__navigation main-navigation wrapper">
-      <ul class="main-navigation__list header-main-nav-list">
+    <nav class="main-navigation wrapper">
+      <ul class="main-navigation__list">
         <li class="main-navigation__li">
           <a class="main-navigation__link" href="#">Главная</a>
         </li>
@@ -68,8 +68,8 @@
       </ul>
     </nav>
   </header>
-  <main class="main-index">
-    <section class="best-deals best-deals-grid wrapper">
+  <main class="main">
+    <section class="main__best best-deals best-deals-grid wrapper">
       <h2 class="visually-hidden">Наши лучшие предложения</h2>
       <div class="best-deals__block best-deals__block--new best-deals__block--materials best-deals-grid__a">
         <p class="best-deals__descr">Материалы</p>
@@ -100,11 +100,11 @@
             <img
               src="img/slide-1-min.jpg" alt="Мужик в каске и очках долбит стену перфоратором Bosch" width="620" height="266">
           </picture>
-          <div class="slide-text-block">
-            <p class="slide-head">Перфораторы</p>
-            <p class="slide-descr">Настоящие мужские игрушки</p>
+          <div class="slider__text-block">
+            <p class="slider__headline">Перфораторы</p>
+            <p class="slider__descr">Настоящие мужские игрушки</p>
           </div>
-          <a class="main-btn main-btn--slide" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+          <a class="main-btn slider__link" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
         </div>
         <div class="slider__slide display-none">
           <picture>
@@ -114,11 +114,11 @@
             <img
               src="img/slide-2-min.jpg" alt="Мужик в каске и очках сверлит стену дрелью Bosch" width="620" height="266">
           </picture>
-          <div class="slide-text-block">
-            <p class="slide-head">Дрели</p>
-            <p class="slide-descr">Соседям на радость!</p>
+          <div class="slider__text-block">
+            <p class="slider__headline">Дрели</p>
+            <p class="slider__descr">Соседям на радость!</p>
           </div>
-          <a class="main-btn main-btn--slide" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+          <a class="main-btn slider__link" href="#">ОТКРЫТЬ КАТАЛОГ</a>
         </div>
         <button class="slider__btn slider__btn--prev" id="prevSlide" type="button"><svg width="22" height="40" viewbox="0 0 22 40" fill="#FFF"><path d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"/></svg><span class="visually-hidden">Предыдущий слайд</span></button>
         <button class="slider__btn slider__btn--next" id="nextSlide" type="button"><svg width="22" height="40" viewbox="0 0 22 40" fill="#FFF"><path d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"/></svg><span class="visually-hidden">Следующий слайд</span></button>
@@ -128,7 +128,7 @@
         </ul>
       </div>
     </section>
-    <section class="popular-items wrapper">
+    <section class="main__popular-items popular-items wrapper">
       <div class="popular-items__head popular-head">
         <h2 class="popular-head__headline">Популярные товары:</h2>
         <a class="main-btn main-btn--popular" href="#">все популярные товары</a>
@@ -200,7 +200,7 @@
         </li>
       </ul>
     </section>
-    <section class="popular-brands wrapper">
+    <section class="main__popular-brands popular-brands wrapper">
       <div class="popular-brands__head popular-head">
         <h2 class="popular-head__headline">Популярные производители:</h2>
         <a class="main-btn main-btn--popular" href="#">все производители</a>
@@ -304,7 +304,7 @@
         </li>
       </ul>
     </section>
-    <section class="services">
+    <section class="main__services services">
       <div class="services__wrapper">
         <h2 class="services__headline">Сервисы</h2>
         <p class="services__descr">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -332,7 +332,7 @@
         </div>
       </div>
     </section>
-    <section class="info wrapper">
+    <section class="main__info info wrapper">
       <h2 class="visually-hidden">Информация о нас</h2>
       <div class="info__about about-us">
         <h3 class="about-us__headline">КОМПАНИЯ «Техномарт»</h3>
