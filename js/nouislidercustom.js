@@ -21,6 +21,6 @@ var formValues = [
 ];
 
 slider.noUiSlider.on('update', function (values, handle) {
-  snapValues[handle].innerHTML = values[handle];
-  formValues[handle].value = values[handle];
+  snapValues[handle].innerHTML = Math.floor(values[handle]);
+  formValues[handle].value = Math.floor(values[handle]);
 });
