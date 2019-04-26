@@ -2717,6 +2717,12 @@ input[type="radio"].visually-hidden {
   height: 20px;
 
   border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: 0 !important;
 }
 
 .noUi-handle::before,
