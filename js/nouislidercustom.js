@@ -6,21 +6,25 @@ noUiSlider.create(slider, {
   range: {
       'min': 0,
       'max': 30000
-  },
-  step: 200
+  }
 });
 
-var snapValues = [
-  document.getElementById('min-price'),
-  document.getElementById('max-price')
-];
-
-var formValues = [
-  document.getElementById('min-price-value'),
-  document.getElementById('max-price-value')
-];
+var minPrice = document.getElementById('minPrice');
+var maxPrice = document.getElementById('maxPrice');
 
 slider.noUiSlider.on('update', function (values, handle) {
-  snapValues[handle].innerHTML = Math.floor(values[handle]);
-  formValues[handle].value = Math.floor(values[handle]);
+  var value = values[handle];
+  if (handle) {
+    maxPrice.value = Math.floor(value);
+  } else {
+    minPrice.value = Math.floor(value);
+  }
+});
+
+minPrice.addEventListener('change', function() {
+  slider.noUiSlider.set([this.value, null]);
+});
+
+maxPrice.addEventListener('change', function() {
+  slider.noUiSlider.set([null, this.value]);
 });

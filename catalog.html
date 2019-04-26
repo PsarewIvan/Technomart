@@ -91,18 +91,14 @@
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="filter__price price-slider">
             <legend class="price-slider__headline">ЦЕНА:</legend>
-            <div class="visually-hidden">
-              <label for="min-price-value">Минимальая цена</label>
-              <input type="text" id="min-price-value" name="min-price-value" tabindex="-1">
-              <label for="max-price-value">Максимальная цена</label>
-              <input type="text" id="max-price-value" name="max-price-value" tabindex="-1">
-            </div>
             <div class="price-slider__block">
               <div id="range-slider"></div>
             </div>
             <div class="price-slider__output">
-              <p class="price-slider__value"><span id="min-price">0</span></p>
-              <p class="price-slider__value"><span id="max-price">30000</span></p>
+              <label class="visually-hidden" for="min">Минимальая цена</label>
+              <input class="price-slider__value" type="number" id="minPrice" name="minPrice" max="30000" min="0">
+              <label class="visually-hidden" for="max">Максимальная цена</label>
+              <input class="price-slider__value" type="number" id="maxPrice" name="maxPrice" max="30000" min="0">
             </div>
           </fieldset>
           <fieldset class="filter__manufacturers form-list">

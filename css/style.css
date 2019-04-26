@@ -2333,7 +2333,18 @@ input[type="radio"].visually-hidden {
   text-align: center;
 
   background-color: #f7f3ec;
+  border: none;
   border-radius: 3px;
+
+  -moz-appearance: textfield;
+}
+
+.price-slider__value::-webkit-inner-spin-button, 
+.price-slider__value::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .filter__price {
