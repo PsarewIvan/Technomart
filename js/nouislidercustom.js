@@ -7,7 +7,7 @@ noUiSlider.create(slider, {
       'min': 0,
       'max': 30000
   },
-  step: 100
+  step: 200
 });
 
 var snapValues = [
