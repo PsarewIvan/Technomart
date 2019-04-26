@@ -2701,3 +2701,44 @@ input[type="radio"].visually-hidden {
 .display-none {
   display: none;
 }
+
+/* ____________________nouislider styles__________________________ */
+.noUi-target {
+  height: 2px;
+
+  background-color: #d7dcde;
+  border: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -9px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+  display: none;
+}
+
+.noUi-handle::after {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+
+  display: block;
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border-radius: 50%;
+
+  content: '';
+}
+
+.noUi-connect {
+background-color: #00ca74;
+}
