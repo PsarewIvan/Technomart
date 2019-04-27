@@ -186,14 +186,12 @@ if (document.getElementById('index')) {
   popupMapBtn.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.remove('display-none');
-    popupMap.classList.add('modal--show');
     modalOverlay.classList.remove('display-none');
   });
   
   popupMapClose.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.add('display-none');
-    popupMap.classList.remove('modal--show');
     modalOverlay.classList.add('display-none');
   });
 }
