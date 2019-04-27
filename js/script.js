@@ -5,6 +5,8 @@ var userBlock = document.querySelector('.log-block__logout');
 var loginBtn = document.querySelector('.log-block__login-btn');
 var logoutBtn = document.querySelector('.log-block__logout-link');
 
+var modalOverlay = document.querySelector('.modal-overlay');
+
 if (document.getElementById('index')) {
   // slider
   var buttonsSLidesArray = document.querySelectorAll('.slider__paginator-button');
@@ -24,7 +26,6 @@ if (document.getElementById('index')) {
   var inputEmail = popup.querySelector('#userEmail');
   var inputMessage =popup.querySelector('#userMessage');
   var modalForm = popup.querySelector('#modalForm');
-  var modalOverlay = document.querySelector('.modal-overlay');
   var isStorage = true;
   var storageName = '';
   var storageEmail = '';
@@ -79,10 +80,8 @@ if (document.getElementById('index')) {
   }
   
   popupBtn.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    popup.classList.remove('display-none');
+    modalShow(popup, evt);
     popup.classList.add('modal--show');
-    modalOverlay.classList.remove('display-none');
     if (storageName && storageEmail) {
       inputName.value = storageName;
       inputEmail.value = storageEmail;
@@ -99,11 +98,9 @@ if (document.getElementById('index')) {
   });
   
   modalCloseBtn.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    popup.classList.add('display-none');
+    modalClose(popup, evt);
     popup.classList.remove('modal--show');
     popup.classList.remove('modal--error');
-    modalOverlay.classList.add('display-none');
   });
   
   modalForm.addEventListener('submit', function(evt) {
@@ -140,30 +137,23 @@ if (document.getElementById('index')) {
   
   window.addEventListener('keydown', function(evt) {
     if (evt.keyCode === 27) {
-      evt.preventDefault();
       if (!popup.classList.contains('display-none')) {
-        popup.classList.add('display-none');
+        modalClose(popup,evt);
         popup.classList.remove('modal--error');
-        modalOverlay.classList.add('display-none');
       }
       if (!popupMap.classList.contains('display-none')) {
-        popupMap.classList.add('display-none');
-        modalOverlay.classList.add('display-none');
+        modalClose(popupMap,evt);
       }
     }
   });
-  
+
   modalOverlay.addEventListener('click', function(evt) {
     if (!popup.classList.contains('display-none')) {
-      evt.preventDefault();
-      popup.classList.add('display-none');
+      modalClose(popup, evt);
       popup.classList.remove('modal--error');
-      modalOverlay.classList.add('display-none');
     }
     if (!popupMap.classList.contains('display-none')) {
-      evt.preventDefault();
-      popupMap.classList.add('display-none');
-      modalOverlay.classList.add('display-none');
+      modalClose(popup, evt);
     }
   });
 
@@ -184,18 +174,13 @@ if (document.getElementById('index')) {
   }
   
   popupMapBtn.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    popupMap.classList.remove('display-none');
-    modalOverlay.classList.remove('display-none');
+    modalShow(popupMap, evt);
   });
   
   popupMapClose.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    popupMap.classList.add('display-none');
-    modalOverlay.classList.add('display-none');
+    modalClose(popupMap, evt);
   });
 }
-
 
 // блок авторизации
 loginBtn.addEventListener('click', function(evt) {
@@ -208,6 +193,42 @@ logoutBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
   loginBlock.classList.remove('display-none');
   userBlock.classList.add('display-none');
+});
+
+
+// buy modal
+var itemBuyButtons = document.querySelectorAll('.items-list__link--buy');
+var modalBuy = document.querySelector('.modal-buy');
+var modalBuyClose = document.getElementById('modalBuyClose');
+var continueBtn = document.querySelector('.modal-buy__continue');
+
+
+
+//модалка добавления товара в корзину
+[].forEach.call(itemBuyButtons, function(el, i) {
+  el.addEventListener('click', function(evt) {
+    modalShow(modalBuy, evt);
+  }.bind(i));
+});
+
+modalOverlay.addEventListener('click', function(evt) {
+  if (!modalBuy.classList.contains('display-none')) {
+    modalClose(modalBuy, evt);
+  }
+});
+
+modalBuyClose.addEventListener('click', function(evt) {
+  modalClose(modalBuy, evt);
+});
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27 && !modalBuy.classList.contains('display-none')) {
+    modalClose(modalBuy, evt);
+  }
+});
+
+continueBtn.addEventListener('click', function(evt) {
+  modalClose(modalBuy, evt);
 });
 
 //  функции
@@ -249,4 +270,16 @@ function goToSlide(n) {
   currentSlide = (n + slidesArray.length) % slidesArray.length;
   slidesArray[currentSlide].className = 'slider__slide';
   buttonsSLidesArray[currentSlide].classList.add('slider__paginator-button--current');
+}
+
+function modalClose(modal, evt) {
+  evt.preventDefault();
+  modal.classList.add('display-none');
+  modalOverlay.classList.add('display-none');
+}
+
+function modalShow(modal, evt) {
+  evt.preventDefault();
+  modal.classList.remove('display-none');
+  modalOverlay.classList.remove('display-none');
 }

@@ -6,7 +6,8 @@ noUiSlider.create(slider, {
   range: {
       'min': 0,
       'max': 30000
-  }
+  },
+  step: 50
 });
 
 var minPrice = document.getElementById('minPrice');
