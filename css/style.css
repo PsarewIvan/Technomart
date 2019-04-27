@@ -360,12 +360,12 @@ input[type="radio"].visually-hidden {
 
   text-align: center;
 
-  background-color: #63a63e;
+  background-color: #5fbb2d;
 }
 
 .header-block1__button--order:hover,
 .header-block1__button--order:focus {
-  background-color: #5fbb2d;
+  background-color: #63a63e;
 }
 
 .header-block1__button:hover::after,
